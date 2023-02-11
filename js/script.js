@@ -35,7 +35,7 @@ let btnimpo = document.getElementsByClassName("ImportanceButton");
 for (let i = 0; i < btnimpo.length; i++) {
   btnimpo[i].addEventListener("click", function () {
     task[i].priority++;
-    if (task[i].priority > 6) { task[i].priority = 0 }; // resets the priority to 0 as 6 is the maximum
+    if (task[i].priority > 5) { task[i].priority = 0 }; // resets the priority to 0 as 5 is the maximum
     if (task[i].priority >= 0 && task[i].priority <= 1) { prio = "success" };
     if (task[i].priority >= 2 && task[i].priority <= 3) { prio = "warning" };
     if (task[i].priority >= 4 && task[i].priority <= 5) { prio = "danger" };
@@ -46,9 +46,11 @@ for (let i = 0; i < btnimpo.length; i++) {
 
 let sort = document.getElementById("sort").addEventListener("click", function () {
   task = task.sort(function (a, b) {
-    return a[5] - b[5];
+    let x = a.priority;
+    let y = b.priority;
+    return x - y;
   });
 
-  console.log(task);
+  console.table(task.reverse());
 
 })
