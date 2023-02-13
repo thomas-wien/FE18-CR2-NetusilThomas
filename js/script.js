@@ -56,7 +56,7 @@ let sort = document.getElementById("sort").addEventListener("click", function ()
     return x - y;
   });
 
-  // console.table(task.reverse());
+  console.table(task.reverse());
 
   createHTML()
   prioColor()
