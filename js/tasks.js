@@ -6,7 +6,7 @@ let tasks = `[{
     "image": "images/image01.webp",
     "priority": 0
   }, {
-    "taskName": "Shoping",
+    "taskName": "Shopping",
     "shortDescription": "going shopping",
     "details": "Don't forget to buy Spinanch and potatoes",
     "deadline": "18.02.2023",
